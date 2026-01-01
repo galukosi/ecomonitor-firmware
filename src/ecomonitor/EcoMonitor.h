@@ -11,9 +11,9 @@ extern const char* getDevicePrefix();
 extern const char* getMeasurementUnit();
 String getApiBaseUrl();
 
+#include <Arduino.h>
 #include <Preferences.h>
 #include <Wire.h>
-#include <Arduino.h>
 #include <WebServer.h>
 #include <HTTPClient.h>
 

@@ -6,27 +6,25 @@ EcoMonitor firmware
 */
 
 #include <Arduino.h>
-#include <Wire.h>
-#include <WebServer.h>
-#include <HTTPClient.h>
-#include <WiFi.h>
-#include <Preferences.h>
-#include <ArduinoJson.h>
-#include <Adafruit_GFX.h>
-#include <Adafruit_SSD1306.h>
-
+#include "ecomonitor/EcoMonitor.h"
 #include "devices/GasGuard.h"
 #include "devices/TempGuard.h"
 #include "devices/HumidGuard.h"
-
-#include "ecomonitor/EcoMonitor.h"
 
 void setup() {
     Serial.begin(115200);
 
     delay(1000);
 
-    setupGasGuard();
+    #ifdef GASGUARD
+        setupGasGuard();
+    #endif
+    #ifdef TEMPGUARD
+        setupTempGuard();
+    #endif
+    #ifdef HUMIDGUARD
+        setupHumidGuard();
+    #endif
 }
 
 void loop() {
