@@ -1,8 +1,9 @@
 /*
-EcoMonitor firmware
-  Device: ESP32
-  Author: Andriy Tymchuk
-  Repository: https://github.com/trinity-corp/ecomonitor-firmware/
+ * File: main.cpp
+ * Description: Controls the start of the system and delegates all work to the modules.
+ * Author: Andriy Tymchuk
+ * Created: 2025-12-17
+ * Note: Almost all files was created on the same date. That's because the code were transfered from Arduino IDE to PlatformIO.
 */
 
 #include <Arduino.h>

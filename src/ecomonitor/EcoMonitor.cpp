@@ -1,3 +1,10 @@
+/*
+ * File: EcoMonitor.cpp
+ * Description: General device logic.
+ * Author: Andriy Tymchuk
+ * Created: 2025-12-17
+*/
+
 #include <Wire.h>
 #include <WiFi.h>
 #include <WebServer.h>
@@ -58,7 +65,7 @@ namespace EcoMonitor {
             Serial.println(F("SSD1306 allocation failed"));
             Serial.println(F("Restarting in 5 seconds..."));
             delay(5000);
-            ESP.restart();  // Краще перезавантажити, ніж зависнути
+            ESP.restart();
         }
         
         display.clearDisplay();
