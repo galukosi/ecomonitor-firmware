@@ -5,7 +5,7 @@
 #include "DS18B20_Sensor.h"
 
 DS18B20_Sensor::DS18B20_Sensor() {
-    tempSensors.begin(); // ініціалізація сенсора
+    tempSensors.begin();
 }
 
 float DS18B20_Sensor::readSensor() {
