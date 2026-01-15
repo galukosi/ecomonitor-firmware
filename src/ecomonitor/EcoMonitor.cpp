@@ -459,7 +459,7 @@ bool handleAPMode() {
     bool isConfig = prefs.getBool("isConfigured", false);  // Use different name
 
     if (WiFi.getMode() == WIFI_STA && WiFi.status() == WL_CONNECTED) {
-        return false;  // Якщо вже підключено до WiFi - не запускаємо AP
+        return false;
     }
 
     if (!isConfig) {
